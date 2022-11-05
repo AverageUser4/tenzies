@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  
+  background-color: #0B2434;
+  font-family: Karla, sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: invert(5%);
+}
+
+.tenzies {
+  max-width: 320px;
+  padding: 34px;
+
+  background-color: #F5F5F5;
+  color: #2B283A;
+  text-align: center;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+.tenzies__heading {
+  margin: 0 0 4px;
+
+  font-size: 26px;
+}
+
+.tenzies__description {
+  margin: 0;
+  padding: 0 16px;
+
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: #4A4E74;
+  font-weight: 400;
+}
+
+.tenzies__numbers-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+
+  margin: 28px 0;
+}
+
+.tenzies__die {
+  position: relative;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  
+  background: #FFFFFF;
+  color: #2B283A;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 21px;
+  border: none;
+  font-family: 'Karla';
+  box-sizing: border-box;
+}
+.tenzies__die--locked {
+  background-color: #59E391;
+}
+
+.tenzies__roll-button {
+  padding: 10px 32px;
+
+  background-color: #5035FF;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-family: 'Karla';
+}
+
+.tracker {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  gap: 8px;
 
-.App-link {
-  color: #61dafb;
-}
+  position: absolute;
+  top: 50px;
+  left: 50px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 28px;
+  color: #fff;
+  text-align: left;
 }
